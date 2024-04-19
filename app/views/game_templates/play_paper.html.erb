@@ -1,0 +1,39 @@
+<% if @random_move == "paper"
+    @outcome = "tied"
+  elsif @random_move =="scissors"  
+    @outcome = "lost"
+  else
+    @outcome = "won"
+  end %>
+
+      <div>
+    <a href="/rock">
+      Play Rock
+    </a>
+  </div>
+
+  <div>
+    <a href="/paper">
+      Play Paper
+    </a>
+  </div>
+
+  <div>
+    <a href="/scissors">
+      Play Scissors
+    </a>
+  </div>
+
+<h2>
+  We played paper!
+</h2>
+
+<h2>
+  They played <%= @random_move %>!
+</h2>
+
+<h2>
+  We <%= @outcome %>!
+</h2>
+
+<a href="/">Rules</a>
